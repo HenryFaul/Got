@@ -8,15 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isActive: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        
+        
+        ZStack {
+            if self.isActive {
+                HouseListView()
+            } else {
+                LinearGradient(gradient: Gradient(colors: [.black,.gray,.white]),
+                               startPoint:.topLeading,
+                               endPoint:.bottomTrailing)
+                .ignoresSafeArea(.all)
+                
+                VStack(spacing:10){
+                    Text("Game of Tests")
+                        .font(.system(size: 32, weight: .medium, design: .default)).foregroundColor(.white)
+                        .padding(20)
+                    Image("GOT").resizable()
+                        .scaledToFit()
+                        .padding(10)
+                    
+                }
+            }
         }
-        .padding()
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                withAnimation {
+                    self.isActive = true
+                }
+            }
+        }
     }
+    
+    
+    
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -11,6 +11,16 @@
 		1B0E866C29D97BD000E303D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E866B29D97BD000E303D9 /* ContentView.swift */; };
 		1B0E866E29D97BD200E303D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E866D29D97BD200E303D9 /* Assets.xcassets */; };
 		1B0E867129D97BD200E303D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0E867029D97BD200E303D9 /* Preview Assets.xcassets */; };
+		1B3B626B29DD853B003753AD /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B626A29DD853B003753AD /* CharacterDetailView.swift */; };
+		1B3B626D29DDA215003753AD /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B626C29DDA215003753AD /* CharacterListView.swift */; };
+		1B3B626F29DDAE77003753AD /* ListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */; };
+		1B3B627129DDB2F8003753AD /* BranchSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */; };
+		1B3B627329DDB5B5003753AD /* MemberSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */; };
+		1BEEB09C29DC3355009F98E0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09B29DC3355009F98E0 /* CustomButton.swift */; };
+		1BEEB09E29DC481A009F98E0 /* HouseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09D29DC481A009F98E0 /* HouseListView.swift */; };
+		1BEEB0A029DC4839009F98E0 /* AppSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */; };
+		1BEEB0A229DC5629009F98E0 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB0A129DC5629009F98E0 /* House.swift */; };
+		1BEEB0A429DC5CBD009F98E0 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		1B0E866B29D97BD000E303D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B0E866D29D97BD200E303D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0E867029D97BD200E303D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B3B626A29DD853B003753AD /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		1B3B626C29DDA215003753AD /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSwiftUIView.swift; sourceTree = "<group>"; };
+		1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchSwiftUIView.swift; sourceTree = "<group>"; };
+		1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSwiftUIView.swift; sourceTree = "<group>"; };
+		1BEEB09B29DC3355009F98E0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1BEEB09D29DC481A009F98E0 /* HouseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListView.swift; sourceTree = "<group>"; };
+		1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSwiftUIView.swift; sourceTree = "<group>"; };
+		1BEEB0A129DC5629009F98E0 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				1B0E866929D97BD000E303D9 /* GotApp.swift */,
+				1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */,
+				1B3B626C29DDA215003753AD /* CharacterListView.swift */,
 				1B0E866B29D97BD000E303D9 /* ContentView.swift */,
+				1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */,
+				1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */,
+				1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */,
+				1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */,
+				1BEEB0A129DC5629009F98E0 /* House.swift */,
+				1BEEB09D29DC481A009F98E0 /* HouseListView.swift */,
+				1B3B626A29DD853B003753AD /* CharacterDetailView.swift */,
+				1BEEB09B29DC3355009F98E0 /* CustomButton.swift */,
 				1B0E866D29D97BD200E303D9 /* Assets.xcassets */,
 				1B0E866F29D97BD200E303D9 /* Preview Content */,
 			);
@@ -137,8 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B3B627329DDB5B5003753AD /* MemberSwiftUIView.swift in Sources */,
+				1BEEB0A429DC5CBD009F98E0 /* HouseDetailView.swift in Sources */,
+				1BEEB0A029DC4839009F98E0 /* AppSwiftUIView.swift in Sources */,
 				1B0E866C29D97BD000E303D9 /* ContentView.swift in Sources */,
+				1B3B626D29DDA215003753AD /* CharacterListView.swift in Sources */,
+				1BEEB09E29DC481A009F98E0 /* HouseListView.swift in Sources */,
 				1B0E866A29D97BD000E303D9 /* GotApp.swift in Sources */,
+				1B3B627129DDB2F8003753AD /* BranchSwiftUIView.swift in Sources */,
+				1BEEB0A229DC5629009F98E0 /* House.swift in Sources */,
+				1BEEB09C29DC3355009F98E0 /* CustomButton.swift in Sources */,
+				1B3B626B29DD853B003753AD /* CharacterDetailView.swift in Sources */,
+				1B3B626F29DDAE77003753AD /* ListSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
