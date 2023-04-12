@@ -1,58 +1,67 @@
 //
-//  HouseDetailView.swift
+//  GotHouseDetailSwiftUIView.swift
 //  Got
 //
-//  Created by Henry Faul on 2023/04/04.
+//  Created by Henry Faul on 2023/04/10.
 //
 
 import SwiftUI
 
-struct HouseDetailView: View {
+
+struct GotHouseDetailSwiftUIView: View {
     
-    var house:House
+    var house:GotHouse
     
     var body: some View {
         
-        NavigationView {
+        
+        HStack{
             
-            HStack{
+            VStack{
+                
+                VStack{
+                    Image("wolf")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height:40)
+                        .padding(.vertical,4)
+                    
+                    if((house.name) != nil){
+                        Text(house.name ?? "House not set")
+                            .font(.title).lineLimit(5)
+                        
+                    }
+                    
+                    if((house.region) != nil){
+                        Text(house.region ?? "Region not set")
+                        
+                            .padding(10).lineLimit(5)
+                    }
+                    if((house.coatOfArms) != nil){
+                        Text(house.coatOfArms ?? "Coat of arms not set")
+                        
+                            .padding(10).lineLimit(5).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
+                    }
+                    if((house.words) != nil){
+                        Text(house.words ?? "Words of arms not set")
+                        
+                            .padding(10).lineLimit(5)
+                    }
+                    if((house.diedOut) != nil){
+                        Text(house.diedOut ?? "Died out not set")
+                        
+                            .padding(10).lineLimit(5)
+                    }
+                    
+                }
+                
+                Divider()
                 
                 VStack{
                     
-                    VStack{
-                        Image("wolf")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height:70)
-                            .padding(.vertical,4)
+                    List {
                         
-                        Text(house.name ?? "House not set")
-                            .font(.system(size: 32, weight: .medium, design: .default))
-                            .lineLimit(3)
-                        
-                        Text(house.region ?? "Region not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
-                        
-                        Text(house.coatOfArms ?? "Coat of arms not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
-                        
-                        Text(house.words ?? "Words of arms not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
-                        
-                        Text(house.diedOut ?? "Died out not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
-                    }
-                    
-                    Divider()
-                    
-                    VStack{
-                        
-                        List {
-                            
+                        if(house.currentLord != "" || house.heir != "" || house.currentLord != "" || house.overlord != "" || house.founder != "" ){
                             NavigationLink(destination: CharacterListView(currentLord: house.currentLord, heir: house.heir, overlord: house.overlord, founder: house.founder), label: {
                                 
                                 HStack (){
@@ -64,9 +73,10 @@ struct HouseDetailView: View {
                                     Text("View Characters")
                                 }
                             })
-                            
-                            
-                            
+                        }
+                        
+                        
+                        if(house.titles != [] && house.titles != nil && house.titles != [""]){
                             
                             NavigationLink(destination: ListSwiftUIView(values:  house.titles), label: {
                                 
@@ -79,19 +89,9 @@ struct HouseDetailView: View {
                                     Text("View Titles")
                                 }
                             })
-                            
-                            NavigationLink(destination: ListSwiftUIView(values:  house.titles), label: {
-                                
-                                HStack (){
-                                    Image("wolf")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height:70)
-                                        .padding(.vertical,4)
-                                    Text("View Ancestral Weapons")
-                                }
-                            })
-                            
+                        }
+                        
+                        if(house.cadetBranches?.isEmpty == false){
                             NavigationLink(destination: BranchSwiftUIView(cadetBranches: house.cadetBranches), label: {
                                 
                                 HStack (){
@@ -103,7 +103,10 @@ struct HouseDetailView: View {
                                     Text("View Cadet Brances")
                                 }
                             })
-                            
+                        }
+                        
+                        
+                        if(house.swornMembers?.isEmpty == false){
                             NavigationLink(destination: MemberSwiftUIView(swornMembers:  house.swornMembers), label: {
                                 
                                 HStack (){
@@ -115,27 +118,24 @@ struct HouseDetailView: View {
                                     Text("View Sworn Members")
                                 }
                             })
-                            
-                            
-                            
                         }
                         
+                        
+                        
+                        
                     }
-                    
-                    
                     
                 }
                 
                 
+                
             }
             
+            
         }
+        
         
     }
 }
 
-struct HouseDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        HouseDetailView(house:HouseList.testHouses.first!)
-    }
-}
+

@@ -1,30 +1,36 @@
 //
-//  MemberSwiftUIView.swift
+//  HouseListView.swift
 //  Got
 //
-//  Created by Henry Faul on 2023/04/05.
+//  Created by Henry Faul on 2023/04/04.
 //
 
+import Foundation
 import SwiftUI
 
-struct MemberSwiftUIView: View {
+
+
+struct HouseListView: View {
     
-    let swornMembers: [String]?
+    @StateObject var viewModel = ViewModel()
     
-    @StateObject var viewModelMembers = ViewModelMembers()
     
     var body: some View {
         
-        NavigationView {
-            
+
+        
             List {
                 
-                ForEach(viewModelMembers.characters, id: \.self) { item in
+                ForEach(viewModel.houses, id: \.self) { item in
                     
-                    NavigationLink(destination: CharacterDetailView(character_url: item.url ?? ""), label: {
+                    NavigationLink(destination: HouseDetailView(house: item), label: {
                         
                         VStack (alignment: .leading){
                             
+                            
+                            Text(item.name ?? "Not set")
+                                .font(.system(size: 32, weight: .medium, design: .default))
+                                .lineLimit(2)
                             
                             HStack{
                                 
@@ -34,7 +40,7 @@ struct MemberSwiftUIView: View {
                                     .frame(height:70)
                                     .padding(.vertical,4)
                                 
-                                Text(item.name ?? "View character")
+                                Text(item.region ?? "Not set")
                                     .fontWeight(.semibold)
                                     .lineLimit(2)
                                 
@@ -42,23 +48,21 @@ struct MemberSwiftUIView: View {
                             
                         }
                     })
+                    
+                    
                 }
                 
-                
             }.onAppear{
-                
-                viewModelMembers.fetch(characters: swornMembers)
+                viewModel.fetch()
             }
-            .navigationTitle("Swornmember list:")
-        }
-        
+            
         
         
     }
 }
 
-struct MemberSwiftUIView_Previews: PreviewProvider {
+struct HouseListViewPreviews: PreviewProvider {
     static var previews: some View {
-        MemberSwiftUIView(swornMembers: ["String"])
+        HouseListView()
     }
 }

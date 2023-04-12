@@ -17,7 +17,7 @@ struct ContentView: View {
         
         ZStack {
             if self.isActive {
-                HouseListView()
+              NavSwiftUIView()
             } else {
                 LinearGradient(gradient: Gradient(colors: [.black,.gray,.white]),
                                startPoint:.topLeading,

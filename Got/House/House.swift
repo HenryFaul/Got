@@ -95,55 +95,6 @@ class ViewModel: ObservableObject {
     }
 }
 
-class ViewModelBranch: ObservableObject {
-    
-    @Published var houses: [House] = []
-    
-    func fetch(brances: [String]?) {
-        
-        var temp_houses: [House] = []
-        
-        for branch in brances! {
-            
-            guard let url = URL(string: branch) else {return}
-            
-            URLSession.shared.dataTask(with: url) { [weak self]
-                ( data, response, error) in
-                
-                if let error = error {
-                    print("error : \(error)")
-                }
-                
-                guard let data = data else {
-                    print("no data found")
-                    return
-                }
-                
-                
-                do {
-                    let decoder = JSONDecoder()
-                    
-                    let result = try decoder.decode(House.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        
-                        self?.houses.append(result)
-                    }
-                    
-                    
-                } catch let error {
-                    print("error: \(error)")
-                }
-                
-                
-            }.resume()
-        }
-        
-        
-        
-        
-    }
-}
 
 
 
@@ -189,53 +140,6 @@ class ViewModelCharacter: ObservableObject {
         
     }
 }
-
-class ViewModelMembers: ObservableObject {
-    
-    @Published var characters: [Character] = []
-    
-    func fetch(characters: [String]?) {
-        
-        for character in characters! {
-            
-            guard let url = URL(string: character) else {return}
-            
-            URLSession.shared.dataTask(with: url) { [weak self]
-                ( data, response, error) in
-                
-                if let error = error {
-                    print("error : \(error)")
-                }
-                
-                guard let data = data else {
-                    print("no data found")
-                    return
-                }
-                
-                
-                do {
-                    let decoder = JSONDecoder()
-                    
-                    let result = try decoder.decode(Character.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        
-                        self?.characters.append(result)
-                        
-                        
-                    }
-                    
-                } catch let error {
-                    print("error: \(error)")
-                }
-                
-                
-            }.resume()
-        }
-        
-    }
-}
-
 
 
 

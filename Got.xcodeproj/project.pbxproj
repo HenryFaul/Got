@@ -16,9 +16,20 @@
 		1B3B626F29DDAE77003753AD /* ListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */; };
 		1B3B627129DDB2F8003753AD /* BranchSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */; };
 		1B3B627329DDB5B5003753AD /* MemberSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */; };
+		1B5F4C0029E5E5B000A7050A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4BFF29E5E5B000A7050A /* Book.swift */; };
+		1B5F4C0229E5EDDA00A7050A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0129E5EDDA00A7050A /* BookModel.swift */; };
+		1B5F4C0429E5F35200A7050A /* BooksSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0329E5F35200A7050A /* BooksSwiftUIView.swift */; };
+		1B5F4C0629E5FA8D00A7050A /* BookDetailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0529E5FA8D00A7050A /* BookDetailSwiftUIView.swift */; };
+		1B5F4C0829E610EC00A7050A /* CharactersSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0729E610EC00A7050A /* CharactersSwiftUIView.swift */; };
+		1B5F4C0A29E6889600A7050A /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0929E6889600A7050A /* CharacterModel.swift */; };
+		1B5F4C0C29E6894700A7050A /* GotCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F4C0B29E6894700A7050A /* GotCharacter.swift */; };
+		1B6AAA5129E479CF00DF5D28 /* NavSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAA5029E479CF00DF5D28 /* NavSwiftUIView.swift */; };
+		1B6AAA5329E47E9900DF5D28 /* HouseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAA5229E47E9900DF5D28 /* HouseModel.swift */; };
+		1B6AAA5529E47FFC00DF5D28 /* HousesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAA5429E47FFC00DF5D28 /* HousesSwiftUIView.swift */; };
+		1B6AAA5729E48CB200DF5D28 /* GotHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAA5629E48CB200DF5D28 /* GotHouse.swift */; };
+		1B6AAA5929E4AB5600DF5D28 /* GotHouseDetailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAA5829E4AB5600DF5D28 /* GotHouseDetailSwiftUIView.swift */; };
 		1BEEB09C29DC3355009F98E0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09B29DC3355009F98E0 /* CustomButton.swift */; };
 		1BEEB09E29DC481A009F98E0 /* HouseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09D29DC481A009F98E0 /* HouseListView.swift */; };
-		1BEEB0A029DC4839009F98E0 /* AppSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */; };
 		1BEEB0A229DC5629009F98E0 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB0A129DC5629009F98E0 /* House.swift */; };
 		1BEEB0A429DC5CBD009F98E0 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -34,9 +45,20 @@
 		1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSwiftUIView.swift; sourceTree = "<group>"; };
 		1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchSwiftUIView.swift; sourceTree = "<group>"; };
 		1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSwiftUIView.swift; sourceTree = "<group>"; };
+		1B5F4BFF29E5E5B000A7050A /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1B5F4C0129E5EDDA00A7050A /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		1B5F4C0329E5F35200A7050A /* BooksSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksSwiftUIView.swift; sourceTree = "<group>"; };
+		1B5F4C0529E5FA8D00A7050A /* BookDetailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailSwiftUIView.swift; sourceTree = "<group>"; };
+		1B5F4C0729E610EC00A7050A /* CharactersSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersSwiftUIView.swift; sourceTree = "<group>"; };
+		1B5F4C0929E6889600A7050A /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		1B5F4C0B29E6894700A7050A /* GotCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotCharacter.swift; sourceTree = "<group>"; };
+		1B6AAA5029E479CF00DF5D28 /* NavSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavSwiftUIView.swift; sourceTree = "<group>"; };
+		1B6AAA5229E47E9900DF5D28 /* HouseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseModel.swift; sourceTree = "<group>"; };
+		1B6AAA5429E47FFC00DF5D28 /* HousesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesSwiftUIView.swift; sourceTree = "<group>"; };
+		1B6AAA5629E48CB200DF5D28 /* GotHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotHouse.swift; sourceTree = "<group>"; };
+		1B6AAA5829E4AB5600DF5D28 /* GotHouseDetailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotHouseDetailSwiftUIView.swift; sourceTree = "<group>"; };
 		1BEEB09B29DC3355009F98E0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1BEEB09D29DC481A009F98E0 /* HouseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListView.swift; sourceTree = "<group>"; };
-		1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSwiftUIView.swift; sourceTree = "<group>"; };
 		1BEEB0A129DC5629009F98E0 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,18 +93,13 @@
 		1B0E866829D97BD000E303D9 /* Got */ = {
 			isa = PBXGroup;
 			children = (
+				1B6AAA4F29E470F900DF5D28 /* UI */,
+				1B6AAA4E29E4709A00DF5D28 /* Character */,
+				1B6AAA4D29E4708300DF5D28 /* Book */,
+				1B6AAA4C29E4707800DF5D28 /* House */,
 				1B0E866929D97BD000E303D9 /* GotApp.swift */,
-				1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */,
-				1B3B626C29DDA215003753AD /* CharacterListView.swift */,
 				1B0E866B29D97BD000E303D9 /* ContentView.swift */,
-				1BEEB09F29DC4839009F98E0 /* AppSwiftUIView.swift */,
-				1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */,
-				1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */,
-				1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */,
-				1BEEB0A129DC5629009F98E0 /* House.swift */,
-				1BEEB09D29DC481A009F98E0 /* HouseListView.swift */,
-				1B3B626A29DD853B003753AD /* CharacterDetailView.swift */,
-				1BEEB09B29DC3355009F98E0 /* CustomButton.swift */,
+				1B6AAA5029E479CF00DF5D28 /* NavSwiftUIView.swift */,
 				1B0E866D29D97BD200E303D9 /* Assets.xcassets */,
 				1B0E866F29D97BD200E303D9 /* Preview Content */,
 			);
@@ -95,6 +112,54 @@
 				1B0E867029D97BD200E303D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B6AAA4C29E4707800DF5D28 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				1B6AAA5229E47E9900DF5D28 /* HouseModel.swift */,
+				1B3B627029DDB2F8003753AD /* BranchSwiftUIView.swift */,
+				1BEEB0A129DC5629009F98E0 /* House.swift */,
+				1BEEB09D29DC481A009F98E0 /* HouseListView.swift */,
+				1BEEB0A329DC5CBD009F98E0 /* HouseDetailView.swift */,
+				1B6AAA5829E4AB5600DF5D28 /* GotHouseDetailSwiftUIView.swift */,
+				1B6AAA5429E47FFC00DF5D28 /* HousesSwiftUIView.swift */,
+				1B6AAA5629E48CB200DF5D28 /* GotHouse.swift */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		1B6AAA4D29E4708300DF5D28 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				1B5F4BFF29E5E5B000A7050A /* Book.swift */,
+				1B5F4C0129E5EDDA00A7050A /* BookModel.swift */,
+				1B5F4C0329E5F35200A7050A /* BooksSwiftUIView.swift */,
+				1B5F4C0529E5FA8D00A7050A /* BookDetailSwiftUIView.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		1B6AAA4E29E4709A00DF5D28 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				1B3B627229DDB5B5003753AD /* MemberSwiftUIView.swift */,
+				1B3B626A29DD853B003753AD /* CharacterDetailView.swift */,
+				1B3B626C29DDA215003753AD /* CharacterListView.swift */,
+				1B5F4C0729E610EC00A7050A /* CharactersSwiftUIView.swift */,
+				1B5F4C0929E6889600A7050A /* CharacterModel.swift */,
+				1B5F4C0B29E6894700A7050A /* GotCharacter.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		1B6AAA4F29E470F900DF5D28 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B3B626E29DDAE77003753AD /* ListSwiftUIView.swift */,
+				1BEEB09B29DC3355009F98E0 /* CustomButton.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B3B627329DDB5B5003753AD /* MemberSwiftUIView.swift in Sources */,
+				1B5F4C0829E610EC00A7050A /* CharactersSwiftUIView.swift in Sources */,
+				1B6AAA5929E4AB5600DF5D28 /* GotHouseDetailSwiftUIView.swift in Sources */,
+				1B5F4C0629E5FA8D00A7050A /* BookDetailSwiftUIView.swift in Sources */,
 				1BEEB0A429DC5CBD009F98E0 /* HouseDetailView.swift in Sources */,
-				1BEEB0A029DC4839009F98E0 /* AppSwiftUIView.swift in Sources */,
+				1B6AAA5129E479CF00DF5D28 /* NavSwiftUIView.swift in Sources */,
+				1B6AAA5729E48CB200DF5D28 /* GotHouse.swift in Sources */,
 				1B0E866C29D97BD000E303D9 /* ContentView.swift in Sources */,
 				1B3B626D29DDA215003753AD /* CharacterListView.swift in Sources */,
 				1BEEB09E29DC481A009F98E0 /* HouseListView.swift in Sources */,
@@ -177,8 +246,15 @@
 				1B3B627129DDB2F8003753AD /* BranchSwiftUIView.swift in Sources */,
 				1BEEB0A229DC5629009F98E0 /* House.swift in Sources */,
 				1BEEB09C29DC3355009F98E0 /* CustomButton.swift in Sources */,
+				1B5F4C0229E5EDDA00A7050A /* BookModel.swift in Sources */,
+				1B5F4C0A29E6889600A7050A /* CharacterModel.swift in Sources */,
+				1B5F4C0429E5F35200A7050A /* BooksSwiftUIView.swift in Sources */,
 				1B3B626B29DD853B003753AD /* CharacterDetailView.swift in Sources */,
+				1B5F4C0C29E6894700A7050A /* GotCharacter.swift in Sources */,
+				1B6AAA5329E47E9900DF5D28 /* HouseModel.swift in Sources */,
 				1B3B626F29DDAE77003753AD /* ListSwiftUIView.swift in Sources */,
+				1B6AAA5529E47FFC00DF5D28 /* HousesSwiftUIView.swift in Sources */,
+				1B5F4C0029E5E5B000A7050A /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
