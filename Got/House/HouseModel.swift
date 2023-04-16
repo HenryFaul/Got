@@ -87,6 +87,47 @@ class HouseModel:  ObservableObject {
         }.resume()
     }
     
+    func testSearchHouse(toFind: String, _ completion: @escaping (_ success: Bool, _ data: [GotHouse]?) -> Void) {
+        
+        
+        let originalQuery = toFind.replacingOccurrences(of: " ", with: "%20")
+        
+        let url = "https://anapioficeandfire.com/api/houses?pageSize=10&page=1&name=House%20Algood"
+        
+        let session = URLSession(configuration: .default)
+        
+    
+        session.dataTask(with: URL(string: url)!){
+            (data, _, err) in
+            
+            if let error = err{
+                print(error)
+                completion(false,nil)
+              return
+            }
+            
+            guard let APIData = data else {
+                print("No data found")
+                completion(false,nil)
+                return
+            }
+            
+            do{
+                print("house found")
+                
+                let houses = try JSONDecoder().decode([GotHouse].self, from: APIData)
+                completion(true, houses)
+                
+            } catch {
+                completion(false,nil)
+                print(error)
+            }
+            
+            
+        }.resume()
+        
+    }
+    
     func loadInitial(){
         
         let page = 1
@@ -139,7 +180,7 @@ class HouseModel:  ObservableObject {
 
 class ViewModelMembers: ObservableObject {
     
-    @Published var characters: [Character] = []
+    @Published var characters: [GotCharacter] = []
     @Published var initialLoad = true
     
     func fetch(characters: [String]?) {
@@ -167,7 +208,7 @@ class ViewModelMembers: ObservableObject {
                         do {
                             let decoder = JSONDecoder()
                             
-                            let result = try decoder.decode(Character.self, from: data)
+                            let result = try decoder.decode(GotCharacter.self, from: data)
                             
                             DispatchQueue.main.async {
                                 
@@ -194,13 +235,52 @@ class ViewModelMembers: ObservableObject {
             
             
         }
+        
+        
+        func tesFetch(character_url: String, _ completion: @escaping (_ success: Bool, _ data: Character?) -> Void) {
+            
+            
+            guard let url = URL(string: character_url) else {return}
+            
+            
+            URLSession.shared.dataTask(with: url) { [weak self]
+                ( data, response, error) in
+                
+                if let error = error {
+                    print("error : \(error)")
+                    completion(false,nil)
+                }
+                
+                guard let data = data else {
+                    print("no data found")
+                    completion(false,nil)
+                    return
+                }
+                
+                
+                do {
+                    let decoder = JSONDecoder()
+                    
+                    let result = try decoder.decode(Character.self, from: data)
+                    
+                    completion(true,result)
+                    
+                } catch let error {
+                    print("error: \(error)")
+                    completion(false,nil)
+                }
+                
+                
+            }.resume()
+            
+        }
     }
 }
 
 
 class ViewModelBranch: ObservableObject {
     
-    @Published var houses: [House] = []
+    @Published var houses: [GotHouse] = []
     @Published var initialLoad = true
     
     func fetch(brances: [String]?) {
@@ -228,7 +308,7 @@ class ViewModelBranch: ObservableObject {
                     do {
                         let decoder = JSONDecoder()
                         
-                        let result = try decoder.decode(House.self, from: data)
+                        let result = try decoder.decode(GotHouse.self, from: data)
                         
                         DispatchQueue.main.async {
                             

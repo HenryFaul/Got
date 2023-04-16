@@ -20,15 +20,15 @@ struct BranchSwiftUIView: View {
             
             
             List {
-               // if(viewModelBranch.houses.isEmpty){
-                //    ProgressView()
-                //        .padding(.top, 20)
-                //}
+                if(viewModelBranch.houses.isEmpty){
+                  ProgressView()
+                       .padding(.top, 20)
+                }
                 
-                ForEach(viewModelBranch.houses, id: \.self) { item in
+                ForEach(viewModelBranch.houses) { item in
                     
                     if(viewModelBranch.initialLoad == false){
-                        NavigationLink(destination: HouseDetailView(house: item), label: {
+                        NavigationLink(destination: GotHouseDetailSwiftUIView(house: item), label: {
                             
                             VStack (alignment: .leading){
                                 
@@ -57,13 +57,13 @@ struct BranchSwiftUIView: View {
                 }
                 
                 
-            }.onAppear{
-                
-                viewModelBranch.fetch(brances: cadetBranches)
             }
-            .navigationTitle("Branch list:")
             
-        }
+            
+        }.onAppear{
+            
+            viewModelBranch.fetch(brances: cadetBranches)
+        }.navigationTitle("Branch list:")
         
         
     }

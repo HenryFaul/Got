@@ -26,30 +26,66 @@ struct HouseDetailView: View {
                         .padding(.vertical,4)
                     
                     if((house.name) != nil){
-                        Text(house.name ?? "House not set")
-                            .font(.system(size: 32, weight: .medium, design: .default))
-                            .lineLimit(3)
+                        VStack{
+                            
+                            Text("House name:")
+                            Text(house.name ?? "House not set")
+                                .font(.system(size: 32, weight: .medium, design: .default))
+                                .lineLimit(3)
+                        }
+                        
                     }
                     
                     if((house.region) != nil){
-                        Text(house.region ?? "Region not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
+                        
+                        VStack{
+                            
+                            Text("Region:").padding(3)
+                            Text(house.region ?? "Region not set")
+                                .font(.system(size: 20, weight: .medium, design: .default))
+                                .lineLimit(3).padding(3)
+                        }
+                        
+                        
+                       
                     }
                     if((house.coatOfArms) != nil){
-                        Text(house.coatOfArms ?? "Coat of arms not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
+                        
+                        VStack{
+                            
+                            Text("Coat of arms:").padding(3)
+                            Text(house.coatOfArms ?? "Coat of arms not set")
+                                .font(.system(size: 20, weight: .medium, design: .default))
+                                .lineLimit(3).padding(3)
+                        }
+                        
+                        
+                        
                     }
                     if((house.words) != nil){
-                        Text(house.words ?? "Words of arms not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
+                        
+                        VStack{
+                            
+                            Text("House words:").padding(3)
+                            Text(house.words ?? "Words of arms not set")
+                                .font(.system(size: 20, weight: .medium, design: .default))
+                                .lineLimit(3).padding(3)
+                        }
+                        
+                       
                     }
                     if((house.diedOut) != nil){
-                        Text(house.diedOut ?? "Died out not set")
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .lineLimit(3).padding(10)
+                        
+                        
+                        VStack{
+                            
+                            Text("House words:").padding(3)
+                            Text(house.diedOut ?? "Died out not set")
+                                .font(.system(size: 20, weight: .medium, design: .default))
+                                .lineLimit(3).padding(3)
+                        }
+                        
+                        
                     }
                     
                     
@@ -143,8 +179,4 @@ struct HouseDetailView: View {
     }
 }
 
-struct HouseDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        HouseDetailView(house:HouseList.testHouses.first!)
-    }
-}
+

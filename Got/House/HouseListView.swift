@@ -61,8 +61,3 @@ struct HouseListView: View {
     }
 }
 
-struct HouseListViewPreviews: PreviewProvider {
-    static var previews: some View {
-        HouseListView()
-    }
-}

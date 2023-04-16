@@ -25,41 +25,92 @@ struct CharacterDetailView: View {
                 .font(.system(size: 32, weight: .medium, design: .default))
                 .lineLimit(2).padding(5)
             
-            if(viewModelCharacter.character?.name == nil){
+            if(viewModelCharacter.character?.name == nil && viewModelCharacter.character?.name != ""){
                 ProgressView()
                     .padding(.top, 20)
             } else {
                 
-                if(viewModelCharacter.character?.name != nil){
-                    Text(viewModelCharacter.character?.name ?? "Not set")
+                if(viewModelCharacter.character?.name != nil && viewModelCharacter.character?.name != ""){
+                    
+                    HStack{
+                        Text("Name: ").bold()
+                        Text(viewModelCharacter.character?.name ?? "Not set")
+                    }.frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    
+                   
                 }
                 
-                if(viewModelCharacter.character?.gender != nil){
-                    Text(viewModelCharacter.character?.gender ?? "Not set")
+                if(viewModelCharacter.character?.gender != nil && viewModelCharacter.character?.gender != ""){
+                    
+                    HStack{
+                        Text("Gender: ").bold()
+                        Text(viewModelCharacter.character?.gender ?? "Not set")
+                    } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    
                 }
                 
-                if(viewModelCharacter.character?.culture != nil){
-                    Text(viewModelCharacter.character?.culture ?? "Not set")
+                if(viewModelCharacter.character?.culture != nil && viewModelCharacter.character?.culture != ""){
+                    
+                    HStack{
+                        Text("Culture: ").bold()
+                        Text(viewModelCharacter.character?.culture ?? "Not set")
+                    } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                   
                 }
                 
-                if(viewModelCharacter.character?.born != nil){
-                    Text(viewModelCharacter.character?.born ?? "Not set")
+                if(viewModelCharacter.character?.born != nil && viewModelCharacter.character?.born != ""){
+                    
+                    HStack{
+                        Text("Born: ").bold()
+                        Text(viewModelCharacter.character?.born ?? "Not set")
+                    } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    
+                   
                 }
                 
-                if(viewModelCharacter.character?.died != nil){
-                    Text(viewModelCharacter.character?.died ?? "Not set")
+                if(viewModelCharacter.character?.died != nil && viewModelCharacter.character?.died != ""){
+                    
+                    HStack{
+                        Text("Died: ").bold()
+                        Text(viewModelCharacter.character?.died ?? "Not set")
+                    } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                   
                 }
                 
-                if(viewModelCharacter.character?.father != nil){
-                    Text(viewModelCharacter.character?.father ?? "Not set")
+                if(viewModelCharacter.character?.father != nil && viewModelCharacter.character?.father != ""){
+                    
+                    NavigationLink(destination: CharacterDetailView(character_url: (viewModelCharacter.character?.father)!), label: {
+                        
+                        HStack{
+                            Text("Father: ").bold()
+                            Text("View")
+                        } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    })
+                    
                 }
                 
-                if(viewModelCharacter.character?.mother != nil){
-                    Text(viewModelCharacter.character?.mother ?? "Not set")
+                if(viewModelCharacter.character?.mother != nil && viewModelCharacter.character?.mother != ""){
+                    
+                    NavigationLink(destination: CharacterDetailView(character_url: (viewModelCharacter.character?.mother)!), label: {
+                        
+                        HStack{
+                            Text("Mother: ").bold()
+                            Text("View")
+                        } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    })
+                    
                 }
                 
-                if(viewModelCharacter.character?.spouse != nil){
-                    Text(viewModelCharacter.character?.spouse ?? "Not set")
+                if(viewModelCharacter.character?.spouse != nil && viewModelCharacter.character?.spouse != ""){
+                    
+                    NavigationLink(destination: CharacterDetailView(character_url: (viewModelCharacter.character?.spouse)!), label: {
+                        
+                        HStack{
+                            Text("Spouse: ").bold()
+                            Text("View")
+                        } .frame(maxWidth: .infinity, alignment: .leading).padding(15)
+                    })
+                    
                 }
                 
             }

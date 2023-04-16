@@ -27,30 +27,50 @@ struct GotHouseDetailSwiftUIView: View {
                         .padding(.vertical,4)
                     
                     if((house.name) != nil){
-                        Text(house.name ?? "House not set")
-                            .font(.title).lineLimit(5)
+                        
+                        VStack{
+                    
+                            Text(house.name ?? "House not set")
+                                .font(.title).lineLimit(5)
+                        }
+                        
                         
                     }
                     
-                    if((house.region) != nil){
-                        Text(house.region ?? "Region not set")
+                    if((house.region) != nil && (house.region) != ""){
                         
-                            .padding(10).lineLimit(5)
+                        VStack{
+                            Text("Region:").underline().padding(2)
+                            Text(house.region ?? "Region not set")
+                                .padding(3).lineLimit(5)
+                        }
+                       
                     }
-                    if((house.coatOfArms) != nil){
-                        Text(house.coatOfArms ?? "Coat of arms not set")
-                        
-                            .padding(10).lineLimit(5).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
+                    if((house.coatOfArms) != nil && (house.coatOfArms) != ""){
+                        VStack{
+                            Text("Coat of arms:").underline().padding(2)
+                            Text(house.coatOfArms ?? "Coat of arms not set")
+                                .padding(10).lineLimit(5).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
+                        }
                     }
-                    if((house.words) != nil){
-                        Text(house.words ?? "Words of arms not set")
+                    if((house.words) != nil && (house.words) != ""){
                         
-                            .padding(10).lineLimit(5)
+                        VStack{
+                            Text("Words:").underline().padding(2)
+                            Text(house.words ?? "Words of arms not set")
+                                .padding(3).lineLimit(5)
+                        }
+                        
                     }
-                    if((house.diedOut) != nil){
-                        Text(house.diedOut ?? "Died out not set")
+                    if((house.diedOut) != nil && (house.diedOut) != ""){
                         
-                            .padding(10).lineLimit(5)
+                        VStack{
+                            Text("Died out:").underline()
+                            Text(house.diedOut ?? "Died out not set")
+                                .padding(3).lineLimit(5)
+                        }
+                        
+                        
                     }
                     
                 }

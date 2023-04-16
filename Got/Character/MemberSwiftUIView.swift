@@ -22,13 +22,13 @@ struct MemberSwiftUIView: View {
             
             List {
                 
-               // if(viewModelMembers.characters.isEmpty){
+                if(viewModelMembers.characters.isEmpty){
                     
-               //     ProgressView()
-                //        .padding(.top, 20)
-              //  }
+                    ProgressView()
+                       .padding(.top, 20)
+                  }
                 
-                ForEach(viewModelMembers.characters, id: \.self) { item in
+                ForEach(viewModelMembers.characters) { item in
                     
                     if(viewModelMembers.initialLoad == false){
                         NavigationLink(destination: CharacterDetailView(character_url: item.url ?? ""), label: {
@@ -59,14 +59,14 @@ struct MemberSwiftUIView: View {
                 }
                 
                 
-            }.onAppear{
-                
-                viewModelMembers.fetch(characters: swornMembers)
             }
-            .navigationTitle("Swornmember list:")
             
             
+        }.onAppear{
+            
+            viewModelMembers.fetch(characters: swornMembers)
         }
+        .navigationTitle("Character list:")
         
     }
 }

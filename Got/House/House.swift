@@ -139,6 +139,45 @@ class ViewModelCharacter: ObservableObject {
         }.resume()
         
     }
+    
+    func testFetch(character_url: String, _ completion: @escaping (_ success: Bool, _ data: Character?) -> Void) {
+        
+        
+        guard let url = URL(string: character_url) else {return}
+        
+        
+        URLSession.shared.dataTask(with: url) { [weak self]
+            ( data, response, error) in
+            
+            if let error = error {
+                print("error : \(error)")
+                completion(false,nil)
+            }
+            
+            guard let data = data else {
+                print("no data found")
+                completion(false,nil)
+                return
+            }
+            
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                let result = try decoder.decode(Character.self, from: data)
+                
+                completion(true,result)
+                
+            } catch let error {
+                print("error: \(error)")
+                completion(false,nil)
+            }
+            
+            
+        }.resume()
+        
+    }
+    
 }
 
 

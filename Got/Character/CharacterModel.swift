@@ -26,6 +26,43 @@ class CharacterModel:  ObservableObject {
         
     }
     
+    func tesLoad( _ completion: @escaping (_ success: Bool, _ data: [GotCharacter]?) -> Void) {
+        
+        
+        guard let url = URL(string: "https://anapioficeandfire.com/api/characters?pageSize=1000&page=1") else {return}
+        
+        
+        URLSession.shared.dataTask(with: url) { [weak self]
+            ( data, response, error) in
+            
+            if let error = error {
+                print("error : \(error)")
+                completion(false,nil)
+            }
+            
+            guard let data = data else {
+                print("no data found")
+                completion(false,nil)
+                return
+            }
+            
+            
+            do {
+                let decoder = JSONDecoder()
+                
+                let result = try decoder.decode([GotCharacter].self, from: data)
+                
+                completion(true,result)
+                
+            } catch let error {
+                print("error: \(error)")
+                completion(false,nil)
+            }
+            
+            
+        }.resume()
+        
+    }
     
     func loadCharacters(){
         
